@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_road_safety"
+            android:icon="@drawable/ic_directions_car_black_24dp"
+            android:title="@string/road_safety_drawer" />
+        <item
+            android:id="@+id/nav_community"
+            android:icon="@drawable/ic_people_black_24dp"
+            android:title="@string/community_drawer" />
+        <item
+            android:id="@+id/nav_viral_messages"
+            android:icon="@drawable/ic_message_black_24dp"
+            android:title="@string/viral_messages_drawer" />
+        <item
+            android:id="@+id/nav_notifications"
+            android:icon="@drawable/ic_notifications_black_24dp"
+            android:title="@string/notifications_drawer" />
+        <item
+            android:id="@+id/nav_polls"
+            android:icon="@drawable/ic_poll_black_24dp"
+            android:title="@string/polls_drawer" />
+
+
+    </group>
+
+    <item android:title="@string/user_details_drawer">
+        <menu>
+            <item
+                android:id="@+id/nav_profile"
+                android:icon="@drawable/ic_account_circle_black_24dp"
+                android:title="@string/profile_drawer" />
+            <item
+                android:id="@+id/nav_submissions"
+                android:icon="@drawable/ic_assignment_black_24dp"
+                android:title="@string/submissions_drawer" />
+
+            <item
+                android:id="@+id/nav_preferences"
+                android:icon="@drawable/ic_settings_black_24dp"
+                android:title="@string/preferences_drawer" />
+        </menu>
+    </item>
+
+</menu>

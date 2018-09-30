@@ -1,8 +1,5 @@
 package com.smartcitypune.smartpune;
 
-/**
- * Created by Kapil on 03-09-2018.
- */
 
 public class Point {
     Double latitude;

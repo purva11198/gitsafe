@@ -60,11 +60,9 @@ public class GoogleSignInActivity extends AppCompatActivity implements View.OnCl
         if (requestCode == RC_SIGN_IN) {
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
             try {
-                // Google Sign In was successful, authenticate with Firebase
                 GoogleSignInAccount account = task.getResult(ApiException.class);
                 Toast.makeText(this, "Google Sign In was successful", Toast.LENGTH_SHORT).show();
                 firebaseAuthWithGoogle(account);
-//                startActivity(new Intent(GoogleSignInActivity.this, DrawerActivity.class));
             } catch (ApiException e) {
                 // Google Sign In failed
                 Toast.makeText(this, "Google Sign In failed", Toast.LENGTH_SHORT).show();
@@ -114,22 +112,9 @@ public class GoogleSignInActivity extends AppCompatActivity implements View.OnCl
         FirebaseUser currentUser = mAuth.getCurrentUser();
         updateUI(currentUser);
         if (currentUser != null) {
-//            startActivity(new Intent(GoogleSignInActivity.this, FusedLocationActivity.class));
-            startActivity(new Intent(GoogleSignInActivity.this, DrawerActivity.class));
 
-//            Intent intent = new Intent(GoogleSignInActivity.this, ServiceLocationMapsActivity.class);
-//            intent.putExtra("dbPath","data/services/ambulances/-LNRZjmHWcvFoBav39HE");
-//            startActivity(intent);
-
-
-//            Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
-//                    Uri.parse("http://maps.google.com/maps?saddr=19.873154, 75.328350&daddr=19.869506, 75.336332"));
-//            startActivity(intent);
-
-
-//            signOut();
-//            revokeAccess();
-//            displayMessage("Already signed in.");
+            startActivity(new Intent(GoogleSignInActivity.this, AllPermissionsActivity.class));
+//            startActivity(new Intent(GoogleSignInActivity.this, DrawerActivity.class));
         }
     }
 
@@ -149,7 +134,6 @@ public class GoogleSignInActivity extends AppCompatActivity implements View.OnCl
         } else {
             dummyText = "null object";
         }
-//        dummyTextView.setText(dummyText);
         Log.i(TAG, "updateUI: " + dummyText);
     }
 
@@ -180,12 +164,13 @@ public class GoogleSignInActivity extends AppCompatActivity implements View.OnCl
                             AlertDialog.Builder builder = new AlertDialog.Builder(GoogleSignInActivity.this);
                             builder.setPositiveButton("EDIT", new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int id) {
-//                                    startActivity(new Intent(EditProfileActivity.this, DrawerActivity.class));
+//                                    startActivity(new Intent(GoogleSignInActivity.this, EditProfileActivity.class));
                                 }
                             });
                             builder.setNegativeButton("LATER", new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int id) {
-                                    startActivity(new Intent(GoogleSignInActivity.this, DrawerActivity.class));
+                                    startActivity(new Intent(GoogleSignInActivity.this, AllPermissionsActivity.class));
+//                                    startActivity(new Intent(GoogleSignInActivity.this, DrawerActivity.class));
                                 }
                             });
                             builder.setTitle("Profile incomplete")
@@ -193,16 +178,11 @@ public class GoogleSignInActivity extends AppCompatActivity implements View.OnCl
                             AlertDialog dialog = builder.create();
                             dialog.show();
 
-
-                            // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithCredential:success");
-//                            displayMessage("signInWithCredential:success");
-//                            FirebaseUser user = mAuth.getCurrentUser();
 //                            updateUI(user);
 
                         } else {
                             // If sign in fails, display a message to the user.
-
                             Log.w(TAG, "signInWithCredential:failure", task.getException());
                             Snackbar.make(findViewById(R.id.google_sign_in_layout), "Authentication Failed.", Snackbar.LENGTH_SHORT).show();
                             updateUI(null);

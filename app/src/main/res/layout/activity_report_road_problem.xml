@@ -1,71 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp"
     android:layout_height="match_parent"
     tools:context="com.smartcitypune.smartpune.ReportRoadProblemActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical|center_horizontal"
         android:orientation="vertical">
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="@string/report_road_problem_instructions" />
 
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="40sp"
-            android:background="@color/colorPrimary"
-            android:paddingTop="10sp"
-            android:text="@string/pothole_upload"
-            android:textAlignment="center"
-            android:textColor="#ffffff"
-            android:textSize="20sp" />
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/category" />
 
+        <Spinner
+            android:id="@+id/message_category"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/message_description" />
+
+        <EditText
+            android:id="@+id/viral_message_text"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/attachment_instructions" />
 
         <LinearLayout
-            android:id="@+id/layout_button"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_margin="10sp"
-            android:orientation="horizontal"
-            android:weightSum="2">
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/btnChoose"
+            <ImageButton
+                android:id="@+id/attach_file_image_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/pothole_choose_button" />
+                android:src="@drawable/ic_attach_file_black_24dp" />
 
-            <Button
-                android:id="@+id/btnUpload"
+            <TextView
+                android:id="@+id/file_selection_status"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/pothole_upload_button" />
-
-
+                android:layout_marginLeft="20dp"
+                android:text="@string/file_selected"
+                android:visibility="gone" />
         </LinearLayout>
 
 
-        <TextView
-            android:id="@+id/locationText"
+        <Button
+            android:id="@+id/submit_message"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingStart="10sp"
-            android:textAlignment="center" />
-
-
-        <ImageView
-            android:id="@+id/imgView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@id/layout_button"
-            tools:ignore="UnknownId" />
+            android:layout_marginTop="20dp"
+            android:background="@drawable/round_shape_for_button_primary"
+            android:text="@string/submit_message_button"
+            android:textColor="@android:color/white" />
 
     </LinearLayout>
 
-
-</android.support.constraint.ConstraintLayout>
+</ScrollView>

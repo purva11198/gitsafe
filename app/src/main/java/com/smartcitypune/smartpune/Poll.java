@@ -4,28 +4,37 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Poll implements Serializable {
+public  class Poll implements Serializable{
 
     public String attempted;
-
     public String enddate;
     public String question;
     public String startdate;
     public ArrayList<Integer> count;
     public ArrayList<String> responses;
+    public ArrayList<String> uid;
 
     //default constructor
-    public Poll() {
+    public Poll(){
 
     }
 
-    public Poll(String attempted, String enddate, String question, String startdate, ArrayList<Integer> count, ArrayList<String> responses) {
+    public ArrayList<String> getUid() {
+        return uid;
+    }
+
+    public void setUid(ArrayList<String> uid) {
+        this.uid = uid;
+    }
+
+    public Poll(String attempted, String enddate, String question, String startdate, ArrayList<Integer> count, ArrayList<String> responses, ArrayList<String> uid) {
         this.attempted = attempted;
         this.enddate = enddate;
         this.question = question;
         this.startdate = startdate;
-        this.responses = responses;
         this.count = count;
+        this.responses = responses;
+        this.uid = uid;
     }
 
     public String getAttempted() {

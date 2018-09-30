@@ -4,6 +4,7 @@
     <item
         android:id="@+id/action_emergency_contacts"
         android:orderInCategory="100"
+        android:visible="false"
         android:title="@string/emergency_contacts_header"
         app:showAsAction="never" />
 </menu>

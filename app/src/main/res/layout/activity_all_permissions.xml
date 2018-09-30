@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.smartcitypune.smartpune.AllPermissionsActivity">
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="Permissions are required to avail all the functionalities of the applications." />
+
+    <Button
+        android:id="@+id/checkPermissionsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_shape_for_button_primary"
+        android:text="Grant permissions"
+        android:textColor="@android:color/white" />
+</LinearLayout>

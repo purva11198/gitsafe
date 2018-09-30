@@ -11,6 +11,7 @@
     <string name="title_activity_view_group_details">ViewGroupDetailsActivity</string>
     <string name="default_notification_channel_id">fcm_default_channel</string>
     <string name="viral_message_submission_instructions">Instructions:\n\nMake sure your message is not already submitted. Check the submitted viral messages.\n\nPaste the exact message text or provide a description of the attached file.</string>
+
     <string name="sign_in_instructions">Sign in with your registered email address.</string>
     <string name="email_label">Email</string>
     <string name="password_label">Password</string>
@@ -69,4 +70,5 @@
     <string name="viral_message_header">Viral Message</string>
     <string name="viral_message">Viral Messages</string>
     <string name="title_activity_service_location_maps">Map</string>
+    <string name="report_road_problem_instructions">Instructions:  Provide a description of the problem encountered.</string>
 </resources>

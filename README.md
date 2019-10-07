@@ -1,6 +1,8 @@
 # GitSafe
 
-GitSafe is an android unified platform application to make a safe and secure city.The following domains have been taken into account :-
+GitSafe is an android unified platform application to make a safe and secure city. The perspective of the android application is to reduce the response time of the government officials and other emergency services  to respond to user queries and ease the government’s decision making process.
+
+The following domains have been taken into account :-
 
 A. Road Safety to reduce number of road accidents.
 
@@ -75,11 +77,11 @@ spark - Apache frame to support flow of Big Data
 
 # Authors
 
-Purva Chaudhari ( Backend Developer )
+Purva Chaudhari (Backend Developer)
 
-Rushikesh Jachak ( Frontend Developer)
+Rushikesh Jachak (Backend Developer)
 
-Kapil Chandorikar ( Frontend Developer)
+Kapil Chandorikar (Android Developer)
 
 Prabhleen Bindra
 
